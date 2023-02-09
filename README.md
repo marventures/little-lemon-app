@@ -8,6 +8,7 @@
 - User can also customize their name, email, photo and and other user preferences through a Profile Screen.
 - Profile screen also contains four checkboxes enable specific email notifications, like order status, password changes,special offers, and newsletters.
 - Use AsyncStorage module to preserve the chosen preferences even when the user quits the application
+- When clicking the Logout button, user will redirect back to login page, clearing all data saved from Profile.
 - Use SQLite Database to populate, query and filter menu items.
 
 ## Table of contents
