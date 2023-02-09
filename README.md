@@ -40,6 +40,8 @@
 ### Links
 
 - Github: [Code](https://github.com/marvedventures/little-lemon-app)
+- Demo [here:](https://expo.dev/@marvedventures/little-lemon-app?serviceType=classic&distribution=expo-)
+- Scan the QR code to see the demo.
 
 ## My process
 
