@@ -24,7 +24,8 @@
     "react-native-screens": "~3.18.0",
     "expo-sqlite": "~11.0.0",
     "expo-font": "~11.0.1",
-    "expo-splash-screen": "~0.17.5"
+    "expo-splash-screen": "~0.17.5",
+    "expo-updates": "~0.15.6"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9"
