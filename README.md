@@ -29,8 +29,8 @@
 
 ##### npm install && npm start
 ##### Then, a QR Code wil appear on your terminal.
-###### On IOS Scan QR code through Camera app.
-###### On Android : Scan QR code through Expo Go app.
+##### On IOS Scan QR code through Camera app.
+##### On Android : Scan QR code through Expo Go app.
 
 ##### You can also scan this [QR CODE](https://expo.dev/@marvedventures/little-lemon-app?serviceType=classic&distribution=expo-) to view the project without installing.
 
