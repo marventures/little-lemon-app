@@ -30,6 +30,7 @@
 ##### npm install && npm start
 ##### On IOS : Scan QR code through Camera app
 ##### On Android : Scan QR code through Expo Go app
+##### You can also Scan the QR code [here:](https://expo.dev/@marvedventures/little-lemon-app?serviceType=classic&distribution=expo-)
 
 ### Screenshot
 ![final_mockup](https://user-images.githubusercontent.com/108392678/217717918-a6f83c94-c1ab-4796-903e-388b9a67cdd9.jpg)
