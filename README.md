@@ -13,6 +13,7 @@
 ## Table of contents
 
 - [Overview](#overview)
+  - [How to use the project](#how-to-use-the-project)
   - [Screenshot](#screenshot)
   - [Links](#links)
 - [My process](#my-process)
@@ -23,7 +24,13 @@
 
 ## Overview
 
+### How to use the project
+
+#### npm install && npm start
+
 ### Screenshot
+![Onboarding](https://user-images.githubusercontent.com/108392678/217715066-19026169-ab51-450e-b21c-cc925940d03e.jpg)
+![Profile and Home](https://user-images.githubusercontent.com/108392678/217715079-d66eb960-f5cf-4cdf-8f33-b45b320fca7e.jpg)
 
 ### Links
 
