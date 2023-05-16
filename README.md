@@ -32,7 +32,7 @@
 ##### On IOS Scan QR code through Camera app.
 ##### On Android : Scan QR code through Expo Go app.
 
-##### You can also scan this [QR CODE](https://expo.dev/@marvedventures/little-lemon-app?serviceType=classic&distribution=expo-) to view the project. 
+##### You can also scan this [QR CODE](https://expo.dev/@marventures/little-lemon-app) to view the project. 
 
 ### Screenshot
 ![final_mockup](https://user-images.githubusercontent.com/108392678/217717918-a6f83c94-c1ab-4796-903e-388b9a67cdd9.jpg)
@@ -41,8 +41,8 @@
 
 ### Links
 
-- Github: [Code](https://github.com/marvedventures/little-lemon-app)
-- Demo : Scan the [QR Code](https://expo.dev/@marvedventures/little-lemon-app?serviceType=classic&distribution=expo-) to see the demo.
+- Github: [Code](https://github.com/marventures/little-lemon-app)
+- Demo : Scan the [QR Code](https://expo.dev/@marventures/little-lemon-app) to see the demo.
 
 ## My process
 
@@ -145,5 +145,5 @@ useEffect(() => {
 ## Author
 
 - Website - [Marvin Morales Pacis](https://marvin-morales-pacis.vercel.app/)
-- LinkedIn - [@marvedventures](https://www.linkedin.com/in/marvedventures/)
-- Twitter - [@marvedventures](https://www.twitter.com/marvedventures)
+- LinkedIn - [@marventures](https://www.linkedin.com/in/marventures/)
+- Twitter - [@marventures11](https://www.twitter.com/marventures11)
