@@ -1,15 +1,6 @@
 import React, { useState, useEffect, useContext, useCallback } from "react";
-import {
-  View,
-  Image,
-  StyleSheet,
-  Text,
-  KeyboardAvoidingView,
-  Platform,
-  TextInput,
-  Pressable,
-  ScrollView,
-} from "react-native";
+// prettier-ignore
+import { View, Image, StyleSheet, Text, KeyboardAvoidingView, Platform, TextInput, Pressable, ScrollView } from "react-native";
 import { validateEmail } from "../utils";
 import { AuthContext } from "../contexts/AuthContext";
 import Checkbox from "expo-checkbox";
@@ -18,7 +9,7 @@ import * as ImagePicker from "expo-image-picker";
 import { useFonts } from "expo-font";
 import * as SplashScreen from "expo-splash-screen";
 
-const Profile = () => {
+export const Profile = () => {
   const [profile, setProfile] = useState({
     firstName: "",
     lastName: "",
@@ -44,7 +35,7 @@ const Profile = () => {
     })();
   }, [discard]);
 
-  const validateName = name => {
+  const validateName = (name) => {
     if (name.length > 0) {
       return name.match(/[^a-zA-Z]/);
     } else {
@@ -52,7 +43,7 @@ const Profile = () => {
     }
   };
 
-  const validateNumber = number => {
+  const validateNumber = (number) => {
     if (isNaN(number)) {
       return false;
     } else if (number.length == 10) {
@@ -64,7 +55,7 @@ const Profile = () => {
   const { logout } = useContext(AuthContext);
 
   const updateProfile = (key, value) => {
-    setProfile(prevState => ({
+    setProfile((prevState) => ({
       ...prevState,
       [key]: value,
     }));
@@ -108,7 +99,7 @@ const Profile = () => {
     });
 
     if (!result.canceled) {
-      setProfile(prevState => ({
+      setProfile((prevState) => ({
         ...prevState,
         ["image"]: result.assets[0].uri,
       }));
@@ -116,7 +107,7 @@ const Profile = () => {
   };
 
   const removeImage = () => {
-    setProfile(prevState => ({
+    setProfile((prevState) => ({
       ...prevState,
       ["image"]: "",
     }));
@@ -178,7 +169,7 @@ const Profile = () => {
         <TextInput
           style={styles.inputBox}
           value={profile.firstName}
-          onChangeText={newValue => updateProfile("firstName", newValue)}
+          onChangeText={(newValue) => updateProfile("firstName", newValue)}
           placeholder={"First Name"}
         />
         <Text
@@ -192,7 +183,7 @@ const Profile = () => {
         <TextInput
           style={styles.inputBox}
           value={profile.lastName}
-          onChangeText={newValue => updateProfile("lastName", newValue)}
+          onChangeText={(newValue) => updateProfile("lastName", newValue)}
           placeholder={"Last Name"}
         />
         <Text
@@ -207,7 +198,7 @@ const Profile = () => {
           style={styles.inputBox}
           value={profile.email}
           keyboardType="email-address"
-          onChangeText={newValue => updateProfile("email", newValue)}
+          onChangeText={(newValue) => updateProfile("email", newValue)}
           placeholder={"Email"}
         />
         <Text
@@ -222,7 +213,7 @@ const Profile = () => {
           style={styles.inputBox}
           value={profile.phoneNumber}
           keyboardType="phone-pad"
-          onChangeText={newValue => updateProfile("phoneNumber", newValue)}
+          onChangeText={(newValue) => updateProfile("phoneNumber", newValue)}
           placeholder={"Phone number"}
         />
         <Text style={styles.headertext}>Email notifications</Text>
@@ -230,7 +221,9 @@ const Profile = () => {
           <Checkbox
             style={styles.checkbox}
             value={profile.orderStatuses}
-            onValueChange={newValue => updateProfile("orderStatuses", newValue)}
+            onValueChange={(newValue) =>
+              updateProfile("orderStatuses", newValue)
+            }
             color={"#495e57"}
           />
           <Text style={styles.paragraph}>Order statuses</Text>
@@ -239,7 +232,7 @@ const Profile = () => {
           <Checkbox
             style={styles.checkbox}
             value={profile.passwordChanges}
-            onValueChange={newValue =>
+            onValueChange={(newValue) =>
               updateProfile("passwordChanges", newValue)
             }
             color={"#495e57"}
@@ -250,7 +243,9 @@ const Profile = () => {
           <Checkbox
             style={styles.checkbox}
             value={profile.specialOffers}
-            onValueChange={newValue => updateProfile("specialOffers", newValue)}
+            onValueChange={(newValue) =>
+              updateProfile("specialOffers", newValue)
+            }
             color={"#495e57"}
           />
           <Text style={styles.paragraph}>Special offers</Text>
@@ -259,7 +254,7 @@ const Profile = () => {
           <Checkbox
             style={styles.checkbox}
             value={profile.newsletter}
-            onValueChange={newValue => updateProfile("newsletter", newValue)}
+            onValueChange={(newValue) => updateProfile("newsletter", newValue)}
             color={"#495e57"}
           />
           <Text style={styles.paragraph}>Newsletter</Text>
@@ -435,5 +430,3 @@ const styles = StyleSheet.create({
     borderColor: "#83918c",
   },
 });
-
-export default Profile;

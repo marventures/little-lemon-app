@@ -1,14 +1,6 @@
 import React, { useState, useRef, useContext, useCallback } from "react";
-import {
-  View,
-  Image,
-  StyleSheet,
-  Text,
-  KeyboardAvoidingView,
-  Platform,
-  TextInput,
-  Pressable,
-} from "react-native";
+// prettier-ignore
+import { View, Image, StyleSheet, Text, KeyboardAvoidingView, Platform, TextInput, Pressable} from "react-native";
 import PagerView from "react-native-pager-view";
 import { validateEmail, validateName } from "../utils";
 import Constants from "expo-constants";
@@ -17,7 +9,7 @@ import { AuthContext } from "../contexts/AuthContext";
 import { useFonts } from "expo-font";
 import * as SplashScreen from "expo-splash-screen";
 
-const Onboarding = () => {
+export const Onboarding = () => {
   const [firstName, onChangeFirstName] = useState("");
   const [lastName, onChangeLastName] = useState("");
   const [email, onChangeEmail] = useState("");
@@ -275,5 +267,3 @@ const styles = StyleSheet.create({
     borderRadius: 11,
   },
 });
-
-export default Onboarding;

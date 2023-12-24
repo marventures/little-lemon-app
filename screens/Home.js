@@ -1,21 +1,10 @@
 import { useEffect, useState, useCallback, useMemo } from "react";
-import {
-  Text,
-  View,
-  StyleSheet,
-  SectionList,
-  Alert,
-  Image,
-  Pressable,
-} from "react-native";
+// prettier-ignore
+import {Text, View, StyleSheet, SectionList, Alert, Image, Pressable} from "react-native";
 import { Searchbar } from "react-native-paper";
 import debounce from "lodash.debounce";
-import {
-  createTable,
-  getMenuItems,
-  saveMenuItems,
-  filterByQueryAndCategories,
-} from "../database";
+// prettier-ignore
+import { createTable, getMenuItems,saveMenuItems, filterByQueryAndCategories} from "../database";
 import Filters from "../components/Filters";
 import { getSectionListData, useUpdateEffect } from "../utils/utils";
 import AsyncStorage from "@react-native-async-storage/async-storage";
@@ -23,8 +12,9 @@ import Constants from "expo-constants";
 import { useFonts } from "expo-font";
 import * as SplashScreen from "expo-splash-screen";
 
-const API_URL =
+const BASE_URL =
   "https://raw.githubusercontent.com/Meta-Mobile-Developer-PC/Working-With-Data-API/main/capstone.json";
+
 const sections = ["starters", "mains", "desserts"];
 
 const Item = ({ name, price, description, image }) => (
@@ -43,7 +33,7 @@ const Item = ({ name, price, description, image }) => (
   </View>
 );
 
-const Home = ({ navigation }) => {
+export const Home = ({ navigation }) => {
   const [profile, setProfile] = useState({
     firstName: "",
     lastName: "",
@@ -64,7 +54,7 @@ const Home = ({ navigation }) => {
 
   const fetchData = async () => {
     try {
-      const response = await fetch(API_URL);
+      const response = await fetch(BASE_URL);
       const json = await response.json();
       const menu = json.menu.map((item, index) => ({
         id: index + 1,
@@ -104,7 +94,7 @@ const Home = ({ navigation }) => {
   useUpdateEffect(() => {
     (async () => {
       const activeCategories = sections.filter((s, i) => {
-        if (filterSelections.every(item => item === false)) {
+        if (filterSelections.every((item) => item === false)) {
           return true;
         }
         return filterSelections[i];
@@ -122,18 +112,18 @@ const Home = ({ navigation }) => {
     })();
   }, [filterSelections, query]);
 
-  const lookup = useCallback(q => {
+  const lookup = useCallback((q) => {
     setQuery(q);
   }, []);
 
-  const debouncedLookup = useMemo(() => debounce(lookup, 500), [lookup]);
+  const debouncedLookup = useMemo(() => debounce(lookup, 1000), [lookup]);
 
-  const handleSearchChange = text => {
+  const handleSearchChange = (text) => {
     setSearchBarText(text);
     debouncedLookup(text);
   };
 
-  const handleFiltersChange = async index => {
+  const handleFiltersChange = async (index) => {
     const arrayCopy = [...filterSelections];
     arrayCopy[index] = !filterSelections[index];
     setFilterSelections(arrayCopy);
@@ -221,7 +211,7 @@ const Home = ({ navigation }) => {
       <SectionList
         style={styles.sectionList}
         sections={data}
-        keyExtractor={item => item.id}
+        keyExtractor={(item) => item.id}
         renderItem={({ item }) => (
           <Item
             name={item.name}
@@ -359,5 +349,3 @@ const styles = StyleSheet.create({
     fontFamily: "Karla-ExtraBold",
   },
 });
-
-export default Home;
