@@ -35,7 +35,7 @@
 
 ##### On Android : Scan QR code through Expo Go app.
 
-##### You can also scan this [QR CODE](https://expo.dev/preview/update?message=Publish%20Update&updateRuntimeVersion=exposdk%3A47.0.0&createdAt=2024-07-03T09%3A21%3A32.588Z&slug=exp&projectId=221d2bc0-e34d-4538-b828-2e1cabe5bba7&group=2468e4a0-6270-4a2e-8e34-17167031fde8) to view the project.
+##### You can also scan this [QR CODE](https://expo.dev/preview/update?message=Publish%20Update&updateRuntimeVersion=exposdk%3A47.0.0&createdAt=2024-07-03T09%3A21%3A32.588Z&slug=exp&projectId=221d2bc0-e34d-4538-b828-2e1cabe5bba7&group=2468e4a0-6270-4a2e-8e34-17167031fde8) to view the project. (Please use [SDK Version 47](https://expo.dev/go) on Expo Go to view the project)
 
 ### Screenshot
 
